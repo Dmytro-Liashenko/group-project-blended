@@ -27,3 +27,12 @@ export async function getProductByCategory(category) {
     const response = await axios.get(`${API_ENDPOINTS.PRODUCTS_BY_CATEGORY}${category}`)
     return response.data
 }
+
+export async function getProductBySearch(product) {
+    const params = {
+        q: product
+    }
+
+    const response = await axios.get(API_ENDPOINTS.SEARCH, { params })
+    return response.data
+}
