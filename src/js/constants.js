@@ -4,5 +4,5 @@ export const API_ENDPOINTS = {
     PRODUCTS: "/products",
     PRODUCTS_BY_ID: "/products/",
     PRODUCTS_BY_CATEGORY: "/products/category/",
-    SEARCH: ""
+    SEARCH: "/products/search"
 }
