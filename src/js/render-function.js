@@ -1,19 +1,21 @@
 import { refs } from './refs';
 
 export function renderCategories(categories) {
-  const markup = categories
+  const categoriesAll = ["All", ...categories]
+  const markup = categoriesAll
     .map(
       category =>
         `<li class="categories__item">
-   <button class="categories__btn" type="button">${category}</button>
- </li>
-       `
+    <button class="categories__btn" type="button">${category}</button>
+  </li>
+        `
     )
     .join('');
   refs.categoriesList.insertAdjacentHTML('beforeend', markup);
 }
 
 export function renderProducts(products) {
+  
   const markup = products
     .map(({ id, thumbnail, title, brand, category, price }) => {
       return `<li class="products__item" data-id="${id}">
@@ -26,6 +28,6 @@ export function renderProducts(products) {
         <p class="products__price">Price: ${price}$</p>
       </li>`;
     })
-    .join();
+    .join("");
   refs.productsList.insertAdjacentHTML('beforeend', markup);
 }
