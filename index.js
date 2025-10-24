@@ -1,0 +1,2 @@
+import"./assets/styles-JE8YjOlG.js";const t={modal:document.querySelector(".modal"),modalCloseBtn:document.querySelector(".modal__close-btn"),productsList:document.querySelector(".products"),categoriesList:document.querySelector(".categories")};function o(){t.modal.classList.remove("modal--is-open"),document.body.style.overflow="",window.removeEventListener("keydown",c),t.modal.removeEventListener("click",r)}function c(e){e.code==="Escape"&&o()}function r(e){e.target===e.currentTarget&&o()}refs.button.addEventListener("click",o);
+//# sourceMappingURL=index.js.map
