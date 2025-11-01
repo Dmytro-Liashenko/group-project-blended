@@ -18,3 +18,7 @@ export async function initHomePage(){
     }
 
 }
+
+export function onProductClick(event) {
+    console.log("Product clicked!", event);
+}

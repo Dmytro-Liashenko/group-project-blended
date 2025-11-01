@@ -31,3 +31,13 @@ export function renderProducts(products) {
     .join("");
   refs.productsList.insertAdjacentHTML('beforeend', markup);
 }
+
+export function showNotFound(show = true) {
+  const el = document.querySelector('.not-found');
+  if (el) el.style.display = show ? 'flex' : 'none';
+}
+
+export function showLoader(show = true) {
+  const el = document.querySelector('.loader');
+  if (el) el.style.display = show ? 'block' : 'none';
+}

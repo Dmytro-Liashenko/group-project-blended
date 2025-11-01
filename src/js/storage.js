@@ -21,9 +21,26 @@ export function getWishlistItems() {
   return getFromLocalStorage(STORAGE_KEYS.WISHLIST) || [];
 }
 
-// export function saveCart(cart) {
-//   localStorage.setItem(STORAGE_KEYS.cart, JSON.stringify(cart));
-// }
-// export function getCart() {
-//   return JSON.parse(localStorage.getItem(STORAGE_KEYS.cart)) || [];
-// }
+export function saveCart(cart) {
+  localStorage.setItem(STORAGE_KEYS.cart, JSON.stringify(cart));
+}
+export function getCart() {
+  return JSON.parse(localStorage.getItem(STORAGE_KEYS.cart)) || [];
+}
+
+export function updateNavCounts() {
+  const cartCountElement = document.querySelector('[data-cart-count]');
+  const wishlistCountElement = document.querySelector('[data-wishlist-count]');
+
+  const cart = getCart();
+  const wishlist = getWishlistItems();
+
+  if (cartCountElement) {
+    cartCountElement.textContent = cart.length;
+  }
+
+  if (wishlistCountElement) {
+    wishlistCountElement.textContent = wishlist.length;
+  }
+}
+
