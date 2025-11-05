@@ -36,3 +36,4 @@ export async function getProductBySearch(product) {
     const response = await axios.get(API_ENDPOINTS.SEARCH, { params })
     return response.data
 }
+
